@@ -14,33 +14,3 @@ $('.btn_nav').click(function() {
 
 });
 
-// on click show page after 1500ms
-$('.home_link').click(function() {
-  setTimeout(function() {
-    $('.home').addClass('fadeIn');
-  }, 1500);
-});
-
-$('.projects_link').click(function() {
-  setTimeout(function() {
-    $('.projects').addClass('fadeIn');
-  }, 1500);
-});
-
-$('.skills_link').click(function() {
-  setTimeout(function() {
-    $('.skills').addClass('fadeIn');
-  }, 1500);
-});
-
-$('.about_link').click(function() {
-  setTimeout(function() {
-    $('.about').addClass('fadeIn');
-  }, 1500);
-});
-
-$('.contact_link').click(function() {
-  setTimeout(function() {
-    $('.contact').addClass('fadeIn');
-  }, 1500);
-});
