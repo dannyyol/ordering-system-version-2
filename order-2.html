@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/animation-2.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -23,9 +24,9 @@
   <div class="container mt-4">
     <div class="row">
 
-      <div class="col-lg-3 col-sm-5 col-xs-2 small-screen-size">
-        <div class=" list-group list-group-flush" style="height:600px;" id="content-1">
-           <ul class="nav nav-tabs">
+      <div class="col-lg-3 col-sm-4 col-xs-2 mb-5 small-screen-size">
+        <div class="tabs-animated list-group list-group-flush" style="height:600px;" id="content-1">
+           <ul class="nav nav-tabs  nav-justified btn_nav projects_link">
             <li class="nav-item  shadow-sm bg-white rounded">
                 <a class="nav-link active border-warning border-2" href="#rectangle-1" data-toggle="tab">
                     <img src="images/Rectangle.png" alt="" srcset="">
@@ -95,7 +96,10 @@
 
       </div>
       <!-- /.col-lg-3 -->
-      <div class="col-lg-9 top-content-bar col-sm-7">
+
+      
+      
+      <div class="col-lg-9 top-content-bar col-sm-8">
           <div class="row">
               <div class="col-md-8 heading-products">                        
                   <h3> All Time Favourite</h3>
@@ -160,7 +164,7 @@
         </div>
         <!-- modal ends here -->
 
-        <div class="tab-content no-MarginLR small-media-screen">
+        <div class="tab-content no-MarginLR small-media-screen page__style">
             <div class="tab-pane active" id="rectangle-1">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4 ">
@@ -203,30 +207,48 @@
             </div>
 
 
-            <article class="tab-pane" id="rectangle-2">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-50">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <article class="tab-pane fade show" id="rectangle-2">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 ">
+                        <div class="card h-100 main-box-content">
+                            <a data-toggle="modal" data-target="#modalQuickView">
+                            <!-- <a href="#"> -->
+                                <img class="card-img-top" src="images/big-mac-main-4.png" alt="">
+                            </a>
+                            <div class="card-footer border-0 bg-white">
+                                <h4> Food Name</h4>
+                                <h4 class="float-right text-warning">$3.00</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-50">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="col-lg-4 col-md-6 mb-4 ">
+                        <div class="card h-100 main-box-content">
+                            <a href="#">
+                                <img class="card-img-top" src="images/big-mac-1.png" alt="">
+                            </a>
+                            <div class="card-footer border-0 bg-white">
+                                <h4> Food Name</h4>
+                                <h4 class="float-right text-warning">$2.00</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-50">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="col-lg-4 col-md-6 mb-4 ">
+                        <div class="card h-100 main-box-content">
+                            <a href="#">
+                                <img class="card-img-top" src="images/big-mac-main-6.png" alt="">
+                            </a>
+                            <div class="card-footer border-0 bg-white">
+                                <h4> Food Name</h4>
+                                <h4 class="float-right text-warning">$5.00</h4>
                             </div>
                         </div>
+                    </div>
                 </div>
             </article>
         </div>
         <!-- /.row -->
-
       </div>
       <!-- /.col-lg-9 -->
 
@@ -245,7 +267,9 @@
                             <div class="col-12 footer-top-2">
                                 <button class="btn btn-warning pl-3 pr-3"> - </button>
                                 <input type="text" class="form-control btn btn-white border border-warning mr-2 ml-2" value=2 style="width:70px;">
-                                <button class="btn btn-warning pl-3 pr-3"> + </button>
+                                <button id="addtocart" class="btn btn-warning pl-3 pr-3"> + 
+                                    <span class="cart-item"></span>
+                                </button>
                             </div>
                         <!-- </div> -->
                     <!-- </div> -->
@@ -255,7 +279,9 @@
                 <div class="footer-1">
                     <div class="row bg-warning">
                         <div class="col-md-6 col-sm-6 col-6 ordering-item-1">
-                            1 items in list
+                            <div class="cart" id="cart" data-totalitems="0">
+                                Items in list
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-6 ordering-item-2">
                             <a href="order-lists.html">View order list</a>
@@ -305,7 +331,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-        <script src="jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/animation-2.js"></script>
         <script>
 		(function($){
 			$(window).on("load",function(){
